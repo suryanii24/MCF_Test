@@ -1,0 +1,23 @@
+﻿@model Frontend.Models.BpkbViewModel
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Bpkb.AgreementNumber"></label>
+        <input asp-for="Bpkb.AgreementNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Bpkb.BpkbNo"></label>
+        <input asp-for="Bpkb.BpkbNo" class="form-control" />
+    </div>
+    <!-- Add more fields as necessary -->
+
+    <div class="form-group">
+        <label asp-for="Bpkb.LocationId"></label>
+        <select asp-for="Bpkb.LocationId" asp-items="@(new SelectList(Model.Locations, "LocationId", "LocationName"))" class="form-control">
+            <option value="">-- Select Location --</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+

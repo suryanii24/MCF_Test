@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace MCF_Test.Models
+﻿namespace Frontend.Models
 {
     public class TrBpkb
     {
-        [Key]
         public string AgreementNumber { get; set; }
         public string BpkbNo { get; set; }
         public string BranchId { get; set; }
@@ -19,8 +15,5 @@ namespace MCF_Test.Models
         public DateTime CreatedOn { get; set; }
         public string LastUpdatedBy { get; set; }
         public DateTime LastUpdatedOn { get; set; }
-
-        [ForeignKey("LocationId")]
-        public MsStorageLocation Location { get; set; }
     }
 }
